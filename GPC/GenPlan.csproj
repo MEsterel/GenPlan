@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{545150E7-E99D-4B28-8E24-F1776C47E1C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenPlan</RootNamespace>
+    <AssemblyName>GenPlan</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>gpcKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4F884BB44E74D7E9D981B917E2AE15FF8D329C55</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MExceptionReporter">
+      <HintPath>.\MExceptionReporter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MUpdate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MUpdate.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addons\GroupManagerUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\GroupManagerUserCtrl.Designer.cs">
+      <DependentUpon>GroupManagerUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\GroupsViewerUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\GroupsViewerUserCtrl.Designer.cs">
+      <DependentUpon>GroupsViewerUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\PlanDrawerUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\PlanDrawerUserCtrl.Designer.cs">
+      <DependentUpon>PlanDrawerUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\PlanManagerUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\PlanManagerUserCtrl.Designer.cs">
+      <DependentUpon>PlanManagerUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\PlanOptionsUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\PlanOptionsUserCtrl.Designer.cs">
+      <DependentUpon>PlanOptionsUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\PlansViewerUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\PlansViewerUserCtrl.Designer.cs">
+      <DependentUpon>PlansViewerUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\RoomManagerUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\RoomManagerUserCtrl.Designer.cs">
+      <DependentUpon>RoomManagerUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\RoomsViewerUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Addons\RoomsViewerUserCtrl.Designer.cs">
+      <DependentUpon>RoomsViewerUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ErrorProtocol.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreatePlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreatePlanForm.Designer.cs">
+      <DependentUpon>CreatePlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddRoomForm.Designer.cs">
+      <DependentUpon>AddRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModifyGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModifyGroupForm.Designer.cs">
+      <DependentUpon>ModifyGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModifyRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModifyRoomForm.Designer.cs">
+      <DependentUpon>ModifyRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddGroupForm.Designer.cs">
+      <DependentUpon>AddGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlanViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlanViewerForm.Designer.cs">
+      <DependentUpon>PlanViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\AffinitiesModeEnum.cs" />
+    <Compile Include="Objects\FillModeEnum.cs" />
+    <Compile Include="Objects\GenerationParameters.cs" />
+    <Compile Include="Objects\GenerationUserState.cs" />
+    <Compile Include="Objects\RecursiveIndicatorEnum.cs" />
+    <Compile Include="Objects\Seat.cs" />
+    <Compile Include="Objects\Plan.cs" />
+    <Compile Include="Objects\PlanOptions.cs" />
+    <Compile Include="Objects\Room.cs" />
+    <Compile Include="Objects\Student.cs" />
+    <Compile Include="Objects\Group.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Objects\GPCSaveData.cs" />
+    <Compile Include="Core\SaveManager.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Core\Updater.cs" />
+    <EmbeddedResource Include="Addons\GroupManagerUserCtrl.resx">
+      <DependentUpon>GroupManagerUserCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\GroupsViewerUserCtrl.resx">
+      <DependentUpon>GroupsViewerUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\PlanDrawerUserCtrl.resx">
+      <DependentUpon>PlanDrawerUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\PlanManagerUserCtrl.resx">
+      <DependentUpon>PlanManagerUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\PlanOptionsUserCtrl.resx">
+      <DependentUpon>PlanOptionsUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\PlansViewerUserCtrl.resx">
+      <DependentUpon>PlansViewerUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\RoomManagerUserCtrl.resx">
+      <DependentUpon>RoomManagerUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\RoomsViewerUserCtrl.resx">
+      <DependentUpon>RoomsViewerUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreatePlanForm.resx">
+      <DependentUpon>CreatePlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddRoomForm.resx">
+      <DependentUpon>AddRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModifyGroupForm.resx">
+      <DependentUpon>ModifyGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModifyRoomForm.resx">
+      <DependentUpon>ModifyRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddGroupForm.resx">
+      <DependentUpon>AddGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlanViewerForm.resx">
+      <DependentUpon>PlanViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="gpcKey.pfx" />
+    <None Include="GPC_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1436043658_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1431091900_music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\children32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+    <None Include="Resources\addUser16.png" />
+    <None Include="Resources\clock16.png" />
+    <None Include="Resources\folder32.png" />
+    <None Include="Resources\addPage32.png" />
+    <None Include="Resources\update24.png" />
+    <None Include="Resources\bug16.png" />
+    <EmbeddedResource Include="Resources\MUpdate.dll" />
+    <EmbeddedResource Include="Resources\MExceptionReporter.dll" />
+    <None Include="Resources\plan128.png" />
+    <None Include="Resources\plan256.png" />
+    <None Include="Resources\warning16.png" />
+    <None Include="Resources\info16.png" />
+    <None Include="Resources\eye16.png" />
+    <None Include="Resources\gift16.png" />
+    <None Include="Resources\girtTwo16.png" />
+    <EmbeddedResource Include="Resources\System.ValueTuple.dll" />
+    <None Include="Resources\editUser16.png" />
+    <None Include="Resources\minus16.png" />
+    <None Include="Resources\addGroup16.png" />
+    <None Include="Resources\1475011605_user_delete.png" />
+    <None Include="Resources\removeGroup16.png" />
+    <None Include="Resources\edit16.png" />
+    <None Include="Resources\bin16.png" />
+    <None Include="Resources\add16.png" />
+    <None Include="Resources\save161.png" />
+    <None Include="Resources\folder16.png" />
+    <None Include="Resources\new16.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

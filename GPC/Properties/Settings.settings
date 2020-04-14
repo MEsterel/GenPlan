@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GenPlan.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastWorkingPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DonationLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.paypal.me/matthieubadoy</Value>
+    </Setting>
+    <Setting Name="MUpdateAppID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GenPlan</Value>
+    </Setting>
+    <Setting Name="MUpdateXmlFileLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://dl.dropbox.com/s/8ths46fmo2ds7in/update.xml?dl=0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
